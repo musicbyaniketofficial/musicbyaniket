@@ -1,2 +1,3 @@
 # MusicByAniket
-Professional artist website built with React + Tailwind (editable design).
+
+Cinematic dark one-page React + Vite + Tailwind project. Edit src/App.jsx to change content.
