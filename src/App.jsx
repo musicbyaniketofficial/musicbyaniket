@@ -1,10 +1,11 @@
 import React from 'react'
+import headshot from './assets/headshot.jpg'
 
 const ARTIST = {
   name: 'Music By Aniket',
   tagline: 'Independent Artist · Producer · Storyteller',
   bio: 'Aniket crafts emotionally resonant songs that balance intimate storytelling with cinematic production. Influenced by indie, R&B and ambient textures.',
-  headshot: '/assets/headshot.jpg'
+  headshot: headshot
 }
 
 const PROJECTS = [
