@@ -1,5 +1,7 @@
 import React from 'react'
 import headshot from '../assets/headshot.jpg'
+import dil_toda_baki_cover  from '../assets/dil-toda-baaki-hi-main.jpg'
+import meri_aankhon_ke_cover from '../assets/meri-aankhon-ke-darvaaze-khul-na-paye.png'
 
 const ARTIST = {
   name: 'Music By Aniket',
@@ -9,9 +11,9 @@ const ARTIST = {
 }
 
 const PROJECTS = [
-  { id:1, title:'Dil toda baki hi main', type:'Single', year:2024, desc:'A real heart break story poured into a rock passion heartbreak ballad', cover:'../assets/dil-toda-baaki-hi-main.jpg', 
+  { id:1, title:'Dil toda baki hi main', type:'Single', year:2024, desc:'A real heart break story poured into a rock passion heartbreak ballad', cover: dil_toda_baki_cover, 
   spotify:'https://open.spotify.com/track/6j0rHBaFbW6TvXcT9pOkaE?si=5e9a4a1e22bf4771', youtube:'https://music.apple.com/us/song/dil-toda-baaki-hi-main/1730409709' },
-  { id:2, title:'Meri aankhon ke darvaze', type:'BGM ', year:2025, desc:'A Background theme track for a theatre play at jashn-e-rakhta', cover:'../assets/meri-aankhon-ke-darvaaze-khul-na-paye.png',
+  { id:2, title:'Meri aankhon ke darvaze', type:'BGM ', year:2025, desc:'A Background theme track for a theatre play at jashn-e-rakhta', cover: meri_aankhon_ke_cover,
   spotify:'#', youtube:'#'  }
 ]
 
