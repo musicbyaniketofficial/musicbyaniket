@@ -29,7 +29,7 @@ export default function App(){
             <p className="text-gray-300 max-w-prose mb-6">{ARTIST.bio}</p>
             <div className="flex gap-3">
               <a href="https://open.spotify.com/artist/53M7Hui9PzuyC3mX6YNU9D?si=KpFpzTgEQ9O7vxxnQmfYJA" className="px-5 py-3 rounded-full bg-accent text-black font-semibold">Listen on Spotify</a>
-              <a href="https://music.apple.com/us/artist/aniket-verma/1730240331" className="px-5 py-3 rounded-full border border-gray-700">Watch on YouTube</a>
+              <a href="https://music.apple.com/us/artist/aniket-verma/1730240331" className="px-5 py-3 rounded-full border border-gray-700">Listen on Apple Music</a>
             </div>
           </div>
           <div className="w-56 h-56 md:w-72 md:h-72 rounded-3xl overflow-hidden ring-1 ring-white/10">
