@@ -97,6 +97,7 @@ export default function App(){
 			    fetch("https://formspree.io/f/xdkpwrnr", {
 			      method: "POST",
 			      body: new FormData(e.target),
+			      headers: { Accept: "application/json" },
 			    }).then(() => {
 			      alert("✅ Thank you! Your message has been sent successfully.");
 			      e.target.reset();
