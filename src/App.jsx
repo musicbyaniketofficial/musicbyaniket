@@ -9,8 +9,10 @@ const ARTIST = {
 }
 
 const PROJECTS = [
-  { id:1, title:'Waves of Memory', type:'Single', year:2024, desc:'A lush single about home, distance and the small sounds that remind us of childhood.', cover:'/assets/cover1.jpg' },
-  { id:2, title:'Midnight Notes', type:'EP', year:2023, desc:'Four intimate tracks recorded late at night — minimal, honest, and warm.', cover:'/assets/cover2.jpg' }
+  { id:1, title:'Dil toda baki hi main', type:'Single', year:2024, desc:'A real heart break story poured into a rock passion heartbreak ballad', cover:'/assets/dil-toda-baaki-hi-main.jpg', 
+  spotify:'https://open.spotify.com/track/6j0rHBaFbW6TvXcT9pOkaE?si=5e9a4a1e22bf4771', youtube:'https://music.apple.com/us/song/dil-toda-baaki-hi-main/1730409709' },
+  { id:2, title:'Meri aankhon ke darvaze', type:'BGM ', year:2025, desc:'A Background theme track for a theatre play at jashn-e-rakhta', cover:'/assets/meri-aankhon-ke-darvaaze-khul-na-paye.png',
+  spotify:'#', youtube:'#'  }
 ]
 
 export default function App(){ 
@@ -24,8 +26,8 @@ export default function App(){
             <p className="text-lg opacity-90 mb-4">{ARTIST.tagline}</p>
             <p className="text-gray-300 max-w-prose mb-6">{ARTIST.bio}</p>
             <div className="flex gap-3">
-              <a href="#" className="px-5 py-3 rounded-full bg-accent text-black font-semibold">Listen on Spotify</a>
-              <a href="#" className="px-5 py-3 rounded-full border border-gray-700">Watch on YouTube</a>
+              <a href="https://open.spotify.com/artist/53M7Hui9PzuyC3mX6YNU9D?si=KpFpzTgEQ9O7vxxnQmfYJA" className="px-5 py-3 rounded-full bg-accent text-black font-semibold">Listen on Spotify</a>
+              <a href="https://music.apple.com/us/artist/aniket-verma/1730240331" className="px-5 py-3 rounded-full border border-gray-700">Watch on YouTube</a>
             </div>
           </div>
           <div className="w-56 h-56 md:w-72 md:h-72 rounded-3xl overflow-hidden ring-1 ring-white/10">
@@ -47,8 +49,8 @@ export default function App(){
                     <div className="text-sm opacity-70 mb-3">{p.type} • {p.year}</div>
                     <p className="mb-4 leading-relaxed text-gray-300">{p.desc}</p>
                     <div className="flex gap-3">
-                      <a className="px-3 py-2 rounded-full bg-white text-black font-medium" href="#">Spotify</a>
-                      <a className="px-3 py-2 rounded-full border" href="#">YouTube</a>
+                      <a className="px-3 py-2 rounded-full bg-white text-black font-medium" href={p.spotify}>Spotify</a>
+                      <a className="px-3 py-2 rounded-full border" href={p.youtube}>YouTube</a>
                     </div>
                   </div>
                 </div>
@@ -62,14 +64,14 @@ export default function App(){
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
               <p className="mb-4">Featured track</p>
-              <iframe title="spotify" src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6" width="100%" height="120" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe title="spotify" src="https://open.spotify.com/track/6j0rHBaFbW6TvXcT9pOkaE?si=2725c5df0c49462e" width="100%" height="120" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
             <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
               <h3 className="font-semibold mb-3">Find my music</h3>
               <div className="flex flex-wrap gap-3">
-                <a className="px-4 py-3 bg-white text-black rounded-full font-medium" href="#">Spotify</a>
-                <a className="px-4 py-3 border rounded-full" href="#">Apple Music</a>
-                <a className="px-4 py-3 border rounded-full" href="#">YouTube</a>
+                <a className="px-4 py-3 bg-white text-black rounded-full font-medium" href="https://open.spotify.com/artist/53M7Hui9PzuyC3mX6YNU9D?si=jsk5DbpRSN2aO6t7RhREQQ">Spotify</a>
+                <a className="px-4 py-3 border rounded-full" href="https://music.apple.com/us/artist/aniket-verma/1730240331">Apple Music</a>
+                <a className="px-4 py-3 border rounded-full" href="https://youtube.com/@musicbyaniket">YouTube</a>
               </div>
             </div>
           </div>
@@ -78,15 +80,22 @@ export default function App(){
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-6">Contact</h2>
           <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
-            <p className="mb-4">For bookings, press or collaborations — email <a href="mailto:booking@musicbyaniket.com" className="underline">booking@musicbyaniket.com</a></p>
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your name" />
-              <input className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your email" />
-              <textarea className="md:col-span-2 p-3 rounded-lg bg-gray-800 border border-gray-700" rows="5" placeholder="Message"></textarea>
-              <div className="md:col-span-2">
-                <button type="button" className="px-6 py-3 rounded-full bg-accent text-black font-semibold">Send Message</button>
-              </div>
-            </form>
+            <p className="mb-4">For bookings, press or collaborations — email <a href="mailto:musicbyaniketofficial@gmail.com" className="underline">musicbyaniketofficial@gmail.com</a></p>
+            <form name="contact" method="POST" data-netlify="true" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+				  <input type="hidden" name="form-name" value="contact" />
+				  <input name="name" required className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your name" />
+				  <input type="email" name="email" required className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your email" />
+				  <textarea name="message" required className="md:col-span-2 p-3 rounded-lg bg-gray-800 border border-gray-700" rows="5" placeholder="Message"></textarea>
+				  <div className="md:col-span-2">
+				    <button type="submit" className="px-6 py-3 rounded-full bg-accent text-black font-semibold">Send Message</button>
+				  </div>
+			</form>
+			<form name="contact" netlify hidden>
+			  <input type="text" name="name" />
+			  <input type="email" name="email" />
+			  <textarea name="message"></textarea>
+			</form>
+
           </div>
         </section>
       </main>
