@@ -5,8 +5,8 @@ import meri_aankhon_ke_cover from '../assets/meri-aankhon-ke-darvaaze-khul-na-pa
 
 const ARTIST = {
   name: 'Music By Aniket',
-  tagline: 'Independent Artist · Producer · Storyteller',
-  bio: 'Aniket crafts emotionally resonant songs that balance intimate storytelling with cinematic production. Influenced by indie, R&B and ambient textures.',
+  tagline: 'Artist · Musician (exploring day by day)',
+  bio: 'Hi, I’m Aniket — an artist and storyteller. I create emotionally resonant songs that blend intimate storytelling with cinematic soundscapes. With over 17 years of musical exploration, I’ve grown as a singer, composer, and songwriter driven by a deep love for melody and emotion.',
   headshot: headshot
 }
 
