@@ -92,9 +92,18 @@ export default function App(){
           <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
             <p className="mb-4">For bookings, press or collaborations — email <a href="mailto:musicbyaniketofficial@gmail.com" className="underline">musicbyaniketofficial@gmail.com</a></p>
             <form
-			  action="mailto:musicbyaniketofficial@gmail.com"
-			  method="POST"
-			  encType="text/plain"
+			  onSubmit={(e) => {
+			    e.preventDefault();
+			    fetch("https://formspree.io/f/xdkpwrnr", {
+			      method: "POST",
+			      body: new FormData(e.target),
+			    }).then(() => {
+			      alert("✅ Thank you! Your message has been sent successfully.");
+			      e.target.reset();
+			    }).catch(() => {
+			      alert("❌ Oops! Something went wrong. Please try again later.");
+			    });
+			  }}
 			  className="grid grid-cols-1 md:grid-cols-2 gap-4"
 			>
 			  <input
@@ -120,12 +129,13 @@ export default function App(){
 			  <div className="md:col-span-2">
 			    <button
 			      type="submit"
-			      className="px-6 py-3 rounded-full bg-accent text-black font-semibold"
+			      className="px-6 py-3 rounded-full bg-accent text-black font-semibold hover:scale-105 transition"
 			    >
 			      Send Message
 			    </button>
 			  </div>
 			</form>
+
 
           </div>
         </section>
