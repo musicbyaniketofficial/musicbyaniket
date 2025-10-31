@@ -91,19 +91,40 @@ export default function App(){
           <h2 className="text-3xl font-semibold mb-6">Contact</h2>
           <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
             <p className="mb-4">For bookings, press or collaborations — email <a href="mailto:musicbyaniketofficial@gmail.com" className="underline">musicbyaniketofficial@gmail.com</a></p>
-            <form name="contact" method="POST" data-netlify="true" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-				  <input type="hidden" name="form-name" value="contact" />
-				  <input name="name" required className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your name" />
-				  <input type="email" name="email" required className="p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Your email" />
-				  <textarea name="message" required className="md:col-span-2 p-3 rounded-lg bg-gray-800 border border-gray-700" rows="5" placeholder="Message"></textarea>
-				  <div className="md:col-span-2">
-				    <button type="submit" className="px-6 py-3 rounded-full bg-accent text-black font-semibold">Send Message</button>
-				  </div>
-			</form>
-			<form name="contact" netlify hidden>
-			  <input type="text" name="name" />
-			  <input type="email" name="email" />
-			  <textarea name="message"></textarea>
+            <form
+			  action="mailto:musicbyaniketofficial@gmail.com"
+			  method="POST"
+			  encType="text/plain"
+			  className="grid grid-cols-1 md:grid-cols-2 gap-4"
+			>
+			  <input
+			    name="name"
+			    className="p-3 rounded-lg bg-gray-800 border border-gray-700"
+			    placeholder="Your name"
+			    required
+			  />
+			  <input
+			    name="email"
+			    type="email"
+			    className="p-3 rounded-lg bg-gray-800 border border-gray-700"
+			    placeholder="Your email"
+			    required
+			  />
+			  <textarea
+			    name="message"
+			    className="md:col-span-2 p-3 rounded-lg bg-gray-800 border border-gray-700"
+			    rows="5"
+			    placeholder="Message"
+			    required
+			  ></textarea>
+			  <div className="md:col-span-2">
+			    <button
+			      type="submit"
+			      className="px-6 py-3 rounded-full bg-accent text-black font-semibold"
+			    >
+			      Send Message
+			    </button>
+			  </div>
 			</form>
 
           </div>
