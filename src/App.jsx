@@ -9,9 +9,9 @@ const ARTIST = {
 }
 
 const PROJECTS = [
-  { id:1, title:'Dil toda baki hi main', type:'Single', year:2024, desc:'A real heart break story poured into a rock passion heartbreak ballad', cover:'/assets/dil-toda-baaki-hi-main.jpg', 
+  { id:1, title:'Dil toda baki hi main', type:'Single', year:2024, desc:'A real heart break story poured into a rock passion heartbreak ballad', cover:'../assets/dil-toda-baaki-hi-main.jpg', 
   spotify:'https://open.spotify.com/track/6j0rHBaFbW6TvXcT9pOkaE?si=5e9a4a1e22bf4771', youtube:'https://music.apple.com/us/song/dil-toda-baaki-hi-main/1730409709' },
-  { id:2, title:'Meri aankhon ke darvaze', type:'BGM ', year:2025, desc:'A Background theme track for a theatre play at jashn-e-rakhta', cover:'/assets/meri-aankhon-ke-darvaaze-khul-na-paye.png',
+  { id:2, title:'Meri aankhon ke darvaze', type:'BGM ', year:2025, desc:'A Background theme track for a theatre play at jashn-e-rakhta', cover:'../assets/meri-aankhon-ke-darvaaze-khul-na-paye.png',
   spotify:'#', youtube:'#'  }
 ]
 
@@ -64,7 +64,15 @@ export default function App(){
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
               <p className="mb-4">Featured track</p>
-              <iframe title="spotify" src="https://open.spotify.com/track/6j0rHBaFbW6TvXcT9pOkaE?si=2725c5df0c49462e" width="100%" height="120" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe
+				  title="spotify"
+				  src="https://open.spotify.com/embed/track/6j0rHBaFbW6TvXcT9pOkaE"
+				  width="100%"
+				  height="120"
+				  frameBorder="0"
+				  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+				  loading="lazy"
+			></iframe>
             </div>
             <div className="bg-gray-900 rounded-2xl p-6 shadow-lg">
               <h3 className="font-semibold mb-3">Find my music</h3>
